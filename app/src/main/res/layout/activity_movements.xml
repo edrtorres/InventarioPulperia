@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="125dp"
         android:background="@drawable/bg_header_green"
         android:gravity="center_vertical"
         android:orientation="vertical"
@@ -86,21 +86,21 @@
                     android:layout_height="wrap_content"
                     android:text="Registrar movimiento"
                     android:textColor="@color/text_primary"
-                    android:textSize="20sp"
+                    android:textSize="19sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="4dp"
                     android:text="Selecciona un producto y registra una entrada o salida"
                     android:textColor="@color/text_secondary"
-                    android:textSize="14sp" />
+                    android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="12dp"
                     android:text="Producto"
                     android:textColor="@color/text_primary"
                     android:textSize="14sp"
@@ -109,8 +109,8 @@
                 <Spinner
                     android:id="@+id/spinnerProductosMovimiento"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/bg_spinner"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
@@ -120,15 +120,15 @@
                     android:id="@+id/txtStockActualMovimiento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="8dp"
                     android:text="Stock actual: --"
                     android:textColor="@color/text_secondary"
-                    android:textSize="14sp" />
+                    android:textSize="13sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="12dp"
                     android:text="Tipo de movimiento"
                     android:textColor="@color/text_primary"
                     android:textSize="14sp"
@@ -138,7 +138,7 @@
                     android:id="@+id/radioGroupTipoMovimiento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="4dp"
                     android:orientation="horizontal">
 
                     <RadioButton
@@ -149,7 +149,7 @@
                         android:checked="true"
                         android:text="Entrada"
                         android:textColor="@color/text_primary"
-                        android:textSize="15sp" />
+                        android:textSize="14sp" />
 
                     <RadioButton
                         android:id="@+id/radioSalida"
@@ -158,14 +158,14 @@
                         android:layout_weight="1"
                         android:text="Salida"
                         android:textColor="@color/text_primary"
-                        android:textSize="15sp" />
+                        android:textSize="14sp" />
 
                 </RadioGroup>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
+                    android:layout_marginTop="8dp"
                     android:text="Cantidad"
                     android:textColor="@color/text_primary"
                     android:textSize="14sp"
@@ -174,18 +174,20 @@
                 <EditText
                     android:id="@+id/edtCantidadMovimiento"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/bg_input"
                     android:hint="Ejemplo: 10"
                     android:inputType="number"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
                     android:textColor="@color/text_primary"
                     android:textColorHint="@color/text_secondary" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
+                    android:layout_marginTop="10dp"
                     android:text="Motivo del movimiento"
                     android:textColor="@color/text_primary"
                     android:textSize="14sp"
@@ -194,8 +196,8 @@
                 <Spinner
                     android:id="@+id/spinnerMotivoMovimiento"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/bg_spinner"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
@@ -204,8 +206,8 @@
                 <TextView
                     android:id="@+id/btnGuardarMovimiento"
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="22dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
                     android:background="@drawable/bg_button_primary"
                     android:gravity="center"
                     android:text="Guardar movimiento"
@@ -219,7 +221,7 @@
                 android:id="@+id/txtTituloHistorial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
+                android:layout_marginTop="18dp"
                 android:text="Historial de movimientos"
                 android:textColor="@color/text_primary"
                 android:textSize="18sp"
@@ -228,10 +230,13 @@
             <ListView
                 android:id="@+id/listViewMovimientos"
                 android:layout_width="match_parent"
-                android:layout_height="280dp"
+                android:layout_height="460dp"
                 android:layout_marginTop="12dp"
+                android:clipToPadding="false"
                 android:divider="@android:color/transparent"
-                android:dividerHeight="10dp" />
+                android:dividerHeight="10dp"
+                android:nestedScrollingEnabled="true"
+                android:paddingBottom="24dp" />
 
         </LinearLayout>
 
